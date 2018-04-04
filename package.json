@@ -4,7 +4,7 @@
   "description": "",
   "main": "array.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "linkedList": "node src/linkedList"
   },
   "keywords": [],
   "author": "Gaurav Mehla <gaurav.ror007@gmail.com> (https://www.mehla.in/)",

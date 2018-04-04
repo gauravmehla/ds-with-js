@@ -47,9 +47,13 @@ linkedList.prettyPrint();
 console.log( '\n >> Is list empty ? : ', chalk.cyan( linkedList.isEmpty() ));
 
 // Length operation
-console.log( '\n >> Lenght of list is : ', chalk.cyan( linkedList.length() ));
+console.log( '\n >> Length of list is : ', chalk.cyan( linkedList.length() ));
 
 // Reverse operation
 console.log( '\n >> Add 10 to each element : ', chalk.gray('linkedList.traverse( node => { node.data += 10; } );'));
 linkedList.traverse( node => { node.data += 10; } );
+linkedList.prettyPrint();
+
+// After operations
+console.log( '\n >> Linked List in the end : ');
 linkedList.prettyPrint();
