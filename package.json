@@ -1,0 +1,16 @@
+{
+  "name": "DS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gaurav Mehla <gaurav.ror007@gmail.com> (https://www.mehla.in/)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "cli-table2": "^0.2.0"
+  }
+}
