@@ -21,7 +21,7 @@ class LinkedList {
 			current = current.next
 		}
 		current.next = newNode;
-		return this.display();
+		return true;
 	}	// </ Append>
 
 	/* 2. Remove item from linked list */
@@ -31,12 +31,12 @@ class LinkedList {
 			return false;
 		}
 		let current = this.head;
-		while( current.next !== null ) {
+		while( current !== null ) {
 			let previous = current;
 			current = current.next;
 			if( current.data === item ) {
 				previous.next = current.next;
-				return this.display();
+				return true;
 			}
 		}
 		return false;
@@ -55,7 +55,7 @@ class LinkedList {
 			if( counter === pos ){
 				newNode.next = current.next
 				current.next = newNode
-				return this.display();
+				return true;
 			}
 			current = current.next
 			counter++;
@@ -71,12 +71,12 @@ class LinkedList {
 		}
 		let counter = 0;
 		let current = this.head;
-		while( current.next !== null ) {
+		while( current !== null ) {
 			let previous = current;
 			current = current.next
 			if( counter === pos ){
 				previous.next = current.next;
-				return this.display();
+				return true;
 			}
 			counter++;
 		}
@@ -87,9 +87,10 @@ class LinkedList {
 	display() {
 		let current = this.head;
 		let elements = [];
-		while( current.next !== null ) {
-			current = current.next
+		while( current !== null ) {
+			console.log( current );
 			elements.push( current.data );
+			current = current.next
 		}
 		return elements.join(" ");
 	}	// </ Display>
@@ -117,9 +118,9 @@ class LinkedList {
 			return false;
 		}
 		let current = this.head;
-		while( current.next !== null ) {
-			current = current.next;
+		while( current !== null ) {
 			fn(current)
+			current = current.next;
 		}
 		return true;
 	} 	// </ Traverse>
@@ -181,11 +182,11 @@ class LinkedList {
 	* 	EXTRA 
 	*/
 	prettyPrint() {
-		let current = this.head;
+		let current = this.head.next;
 		let output = [ chalk.red('Head') + ' ->' ];
-		while( current.next !== null ){
-			current = current.next;
+		while( current !== null ){
 			output.push( chalk.cyan( current.data ) );
+			current = current.next;
 		}
 		this.table( output );
 		return true;
