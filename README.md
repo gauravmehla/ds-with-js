@@ -1,2 +1,1 @@
-# ds-with-js
-Data Structures with JavaScript
+![](media/dswithjs.jpg)
