@@ -136,9 +136,7 @@ class LinkedList {
             prev = current
             current = next
         }
-        let newHead = new Node();
-        newHead.next = prev
-        this.head = newHead
+        this.head.next = prev
         return true
 	}	// </ Reverse>
 
