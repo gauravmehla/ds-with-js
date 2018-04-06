@@ -4,7 +4,8 @@
   "description": "",
   "main": "array.js",
   "scripts": {
-    "linkedList": "node src/linkedList"
+    "linkedList": "node src/linkedList",
+    "doubleLinkedList": "node src/doubleLinkedList"
   },
   "keywords": [],
   "author": "Gaurav Mehla <gaurav.ror007@gmail.com> (https://www.mehla.in/)",

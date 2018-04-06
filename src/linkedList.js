@@ -55,5 +55,8 @@ linkedList.traverse( node => { node.data += 10; } );
 linkedList.prettyPrint();
 
 // After operations
+console.log( '\n >> Is 20 present ? :', linkedList.search(20) ? 'at ' + chalk.cyan(  linkedList.search(20) + ' index' ) : false);
+
+// After operations
 console.log( '\n >> Linked List in the end : ');
 linkedList.prettyPrint();

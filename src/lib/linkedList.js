@@ -176,6 +176,20 @@ class LinkedList {
 		return true
 	}	// </ Swap>
 
+	search( item ) {
+		let current = this.head.next;
+		let counter = 0;
+
+		while( current ) {
+			if( current.data == item ) {
+				return counter
+			}
+			current = current.next
+			counter++
+		}
+		return false;
+	}
+
 	/* 
 	* 	EXTRA 
 	*/
