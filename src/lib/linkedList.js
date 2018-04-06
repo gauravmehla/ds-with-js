@@ -88,7 +88,6 @@ class LinkedList {
 		let current = this.head;
 		let elements = [];
 		while( current !== null ) {
-			console.log( current );
 			elements.push( current.data );
 			current = current.next
 		}
@@ -188,6 +187,39 @@ class LinkedList {
 			counter++
 		}
 		return false;
+	}
+
+	removeDuplicatesWithoutTemp(){
+		let current = this.head;
+		while(current.next) {
+			current = current.next
+			let runner = current
+			while( runner.next ) {
+				let prev = runner
+				runner = runner.next
+				if( runner.data == current.data ){
+					prev.next = runner.next
+					runner = prev
+					console.log( '===>',runner )
+				}
+			}
+		}
+	}
+
+	removeDuplicatesWithTemp(){
+		let current = this.head;
+		let temp = [];
+		let prev = null;
+		while(current.next) {
+			prev = current
+			current = current.next
+			if( !temp.includes(current.data) ) {
+				temp.push( current.data );
+			} else {
+				prev.next = current.next
+				current = prev
+			}
+		}
 	}
 
 	/* 
