@@ -4,7 +4,7 @@ const chalk 		= require('chalk');
 // Initialize new Linked List
 let linkedList = new LinkedList();
 
-[ 1, 2, 3, 4, 1, 6, 7, 2, 9, 1, 1, 1, 1, 2, 4, 5, 1, 2 ].map( function( item ){
+[ 1, 2, 3, 4, 1, 6, 7, 2, 9, 1 ].map( function( item ){
 	// Append some items into list
 	linkedList.append( item );
 } );
@@ -62,8 +62,19 @@ let linkedList = new LinkedList();
 // linkedList.prettyPrint();
 
 
-linkedList.removeDuplicatesWithTemp();
-linkedList.prettyPrint();
+// linkedList.removeDuplicatesWithoutTemp();
+
+let list1 = new LinkedList();
+list1.append(8);
+list1.append(3);
+list1.append(1);
+
+let list2 = new LinkedList();
+list2.append(4);
+list2.append(3);
+
+console.log( linkedList.sum( list1.head.next, list2.head.next ) );
+// linkedList.prettyPrint();
 
 
 

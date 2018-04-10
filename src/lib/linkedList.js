@@ -222,6 +222,36 @@ class LinkedList {
 		}
 	}
 
+	sum( list1, list2, carry = 0 ) {
+		let total;
+
+		if(list1 == null && list2 == null) {
+			total = 0
+		} else if(list1 == null && list2 != null) {
+			total = list2.data + carry
+		} else if(list1 != null && list2 == null) {
+			total = list1.data + carry
+		} else {
+			total = list1.data + list2.data	
+		}
+
+		if( total > 9 ) {
+			carry = total / 10
+			total = total % 10
+		} 
+
+		let node = new Node( total );
+		if( list1.next == null & list2.next == null){
+			return
+		} else if( list2.next == null ) {
+			node.next = this.sum(list1.next, null, carry)	
+		} else if( list1.next == null ){
+			node.next = this.sum(null, list2.next, carry)
+		}
+		
+		return node
+	}
+
 	/* 
 	* 	EXTRA 
 	*/
