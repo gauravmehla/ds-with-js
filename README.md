@@ -8,5 +8,7 @@
     `npm run linkedList`
     
     `npm run doubleLinkedList`
+    
+    `npm run stackAndQueue`
 
 #### ⚠️ This repository is currently in active development. Changes to this repo will be frequent.
