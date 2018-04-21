@@ -17,14 +17,9 @@ class HashTableWithChaining {
 		let key = this.computeHash( item );
 		let node = new Node(item)
 		if ( this.table[key] ) {
-			let current = this.table[key]
-			while( current.next ) {
-				current = current.next
-			}
-			current.next = node;
-		} else {
-			this.table[key] = node
+			node.next = this.table[key]
 		}
+		this.table[key] = node
 	}
 
 	remove( item ) {
