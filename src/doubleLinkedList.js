@@ -49,7 +49,7 @@ console.log( '\n >> Is list empty ? : ', chalk.cyan( doublyLinkedList.isEmpty() 
 // Length operation
 console.log( '\n >> Length of list is : ', chalk.cyan( doublyLinkedList.length() ));
 
-// Reverse operation
+// Traverse operation
 console.log( '\n >> Add 10 to each element : ', chalk.gray('doublyLinkedList.traverse( node => { node.data += 10; } );'));
 doublyLinkedList.traverse( node => { node.data += 10; } );
 doublyLinkedList.prettyPrint();

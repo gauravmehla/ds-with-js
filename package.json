@@ -6,7 +6,8 @@
   "scripts": {
     "linkedList": "node src/linkedList",
     "doubleLinkedList": "node src/doubleLinkedList",
-    "stackAndQueue" : "node src/stackAndQueue"
+    "stackAndQueue" : "node src/stackAndQueue",
+    "hashing" : "node src/hashing"
   },
   "keywords": [],
   "author": "Gaurav Mehla <gaurav.ror007@gmail.com> (https://www.mehla.in/)",
